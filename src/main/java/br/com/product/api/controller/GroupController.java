@@ -13,44 +13,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.product.api.mapper.ProductMapper;
+import br.com.product.api.mapper.GroupMapper;
+import br.com.product.api.mapper.dto.GroupRequestDto;
 import br.com.product.api.mapper.dto.GroupResponseDto;
-import br.com.product.api.mapper.dto.ProductRequestDto;
-import br.com.product.api.mapper.dto.ProductResponseDto;
-import br.com.product.domain.service.ProductService;
+import br.com.product.domain.service.GroupService;
 
 @RestController
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/groups")
+public class GroupController {
 
 	@Autowired
-	private ProductService service;
+	private GroupService service;
 	
 	@Autowired
-	private ProductMapper mapper;
+	private GroupMapper mapper;
 	
 	@GetMapping("/{id}")
-	private ProductResponseDto findById(@PathVariable String id) {
+	private GroupResponseDto findById(@PathVariable String id) {
 		return mapper.toDto(service.findById(id));
 	}
 	
 	@GetMapping
-	private List<ProductResponseDto> findAll(){
+	private List<GroupResponseDto> findAll(){
 		return mapper.toListDto(service.findAll());
 	}
 	
 	@PostMapping
-	private ProductResponseDto save(@RequestBody ProductRequestDto product) {
+	private GroupResponseDto save(@RequestBody GroupRequestDto product) {
 		return mapper.toDto(service.save(mapper.toEntity(product)));
 	}
 	
 	@DeleteMapping("/{id}")
-	private ResponseEntity<ProductResponseDto> deleteById(@PathVariable String id) {
+	private ResponseEntity<GroupResponseDto> deleteById(@PathVariable String id) {
 		boolean delete = service.deleteById(id);
-		var response = new ProductResponseDto();
+		var response = new GroupResponseDto();
 		
 		if(delete) {
-			response.setMessage(String.format("Group %id delete ok", id));
+			response.setMessage(String.format("Product %id delete ok", id));
 		}
 		
 		return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
