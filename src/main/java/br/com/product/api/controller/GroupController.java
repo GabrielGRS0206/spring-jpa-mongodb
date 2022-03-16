@@ -45,13 +45,8 @@ public class GroupController {
 	
 	@DeleteMapping("/{id}")
 	private ResponseEntity<GroupResponseDto> deleteById(@PathVariable String id) {
-		boolean delete = service.deleteById(id);
-		var response = new GroupResponseDto();
-		
-		if(delete) {
-			response.setMessage(String.format("Product %id delete ok", id));
-		}
-		
-		return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
+		service.deleteById(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	
 }

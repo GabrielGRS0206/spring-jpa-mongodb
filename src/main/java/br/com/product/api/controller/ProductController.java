@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.product.api.mapper.ProductMapper;
-import br.com.product.api.mapper.dto.GroupResponseDto;
 import br.com.product.api.mapper.dto.ProductRequestDto;
 import br.com.product.api.mapper.dto.ProductResponseDto;
 import br.com.product.domain.service.ProductService;
@@ -46,13 +45,8 @@ public class ProductController {
 	
 	@DeleteMapping("/{id}")
 	private ResponseEntity<ProductResponseDto> deleteById(@PathVariable String id) {
-		boolean delete = service.deleteById(id);
-		var response = new ProductResponseDto();
-		
-		if(delete) {
-			response.setMessage(String.format("Group %id delete ok", id));
-		}
-		
-		return new ResponseEntity<>(response, HttpStatus.NO_CONTENT);
+		service.deleteById(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	
 }
