@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.product.domain.exception.model.BusinessException;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.repository.GroupRepository;
 import br.com.product.domain.service.GroupService;
@@ -19,7 +20,7 @@ public class GroupServiceImpl implements GroupService {
 	
 	@Override
 	public Group findById(String id) {
-		return repository.findById(id).orElseThrow(() -> new IllegalArgumentException(GROUP_ID_NOT_FOUND));
+		return repository.findById(id).orElseThrow(() -> new BusinessException(GROUP_ID_NOT_FOUND));
 	}
 
 	@Override
@@ -44,7 +45,7 @@ public class GroupServiceImpl implements GroupService {
 	@Override
 	public boolean existsById(String id) {
 		if(!repository.existsById(id)) {
-			throw new IllegalArgumentException(GROUP_ID_NOT_FOUND);
+			throw new BusinessException(GROUP_ID_NOT_FOUND);
 		}
 		return true;
 	}

@@ -15,4 +15,5 @@ public class ProductResponseDto extends BaseResponseDto {
 	private String name;
 	private String description;
 	private BigDecimal value;
+	private GroupResponseDto group;
 }

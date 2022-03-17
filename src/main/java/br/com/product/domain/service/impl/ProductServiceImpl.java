@@ -6,6 +6,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.product.domain.exception.model.BusinessException;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.model.Product;
 import br.com.product.domain.repository.ProductRepository;
@@ -25,7 +26,7 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Override
 	public Product findById(String id) {
-		return repository.findById(id).orElseThrow(() -> new IllegalArgumentException(PRODUCT_ID_NOT_FOUND));
+		return repository.findById(id).orElseThrow(() -> new BusinessException(PRODUCT_ID_NOT_FOUND));
 	}
 
 	@Override
@@ -56,7 +57,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public boolean existsById(String id) {
 		if(!repository.existsById(id)) {
-			throw new IllegalArgumentException(PRODUCT_ID_NOT_FOUND);
+			throw new BusinessException(PRODUCT_ID_NOT_FOUND);
 		}
 		return true;
 	}
