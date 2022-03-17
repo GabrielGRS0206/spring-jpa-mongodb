@@ -13,4 +13,12 @@ public class Group {
 	private String id;
 	private String name;
 	private String observation;
+	
+	public Group(String id) {
+		this.id = id;
+	}
+
+	public Group() {
+		super();
+	}
 }
