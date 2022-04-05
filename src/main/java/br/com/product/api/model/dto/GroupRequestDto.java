@@ -1,4 +1,4 @@
-package br.com.product.api.mapper.dto;
+package br.com.product.api.model.dto;
 
 import lombok.Data;
 

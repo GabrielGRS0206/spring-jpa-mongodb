@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.product.api.mapper.ProductMapper;
-import br.com.product.api.mapper.dto.ProductRequestDto;
-import br.com.product.api.mapper.dto.ProductResponseDto;
+import br.com.product.api.model.dto.ProductRequestDto;
+import br.com.product.api.model.dto.ProductResponseDto;
+import br.com.product.api.model.mapper.ProductMapper;
 import br.com.product.domain.service.ProductService;
 
 @RestController

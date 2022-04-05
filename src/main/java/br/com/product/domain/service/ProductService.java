@@ -9,6 +9,6 @@ public interface ProductService {
 	Product findById(String id);
 	List<Product> findAll();
 	Product save(Product product);
-	boolean deleteById(String id);
+	void deleteById(String id);
 	boolean existsById(String id);
 }

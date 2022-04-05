@@ -7,8 +7,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.product.api.mapper.dto.GroupRequestDto;
-import br.com.product.api.mapper.dto.GroupResponseDto;
+import br.com.product.api.model.dto.GroupRequestDto;
+import br.com.product.api.model.dto.GroupResponseDto;
+import br.com.product.api.model.mapper.GroupMapper;
 import br.com.product.domain.model.Group;
 
 class GroupMapperTest {

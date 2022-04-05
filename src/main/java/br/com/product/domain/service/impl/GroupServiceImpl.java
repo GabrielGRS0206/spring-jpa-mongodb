@@ -3,9 +3,13 @@ package br.com.product.domain.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import br.com.product.domain.exception.model.BusinessException;
+import br.com.product.domain.exception.model.EntityInUseException;
+import br.com.product.domain.exception.model.EntityNotFoundException;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.repository.GroupRepository;
 import br.com.product.domain.service.GroupService;
@@ -34,12 +38,15 @@ public class GroupServiceImpl implements GroupService {
 	}
 
 	@Override
-	public boolean deleteById(String id) {
-		if(existsById(id)) {
-			repository.deleteById(id);
-			return true;
+	public void deleteById(String id) {
+		try {
+			Group group = findById(id);
+			repository.delete(group);
+		} catch (EmptyResultDataAccessException e) {
+			throw new EntityNotFoundException(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new EntityInUseException(id);
 		}
-		return false;
 	}
 
 	@Override

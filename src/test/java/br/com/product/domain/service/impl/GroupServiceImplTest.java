@@ -59,9 +59,7 @@ class GroupServiceImplTest {
 	@Test
 	void testDeleteById() {
 		when(repository.existsById(Mockito.any())).thenReturn(Boolean.TRUE);
-
-		boolean delete = service.deleteById(Mockito.any());
-		assertTrue(delete);
+		service.deleteById(Mockito.any());
 		verify(repository, times(1)).deleteById(Mockito.any());
 	}
 

@@ -1,4 +1,4 @@
-package br.com.product.api.mapper;
+package br.com.product.api.model.mapper;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,8 +8,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.product.api.mapper.dto.ProductRequestDto;
-import br.com.product.api.mapper.dto.ProductResponseDto;
+import br.com.product.api.model.dto.ProductRequestDto;
+import br.com.product.api.model.dto.ProductResponseDto;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.model.Product;
 

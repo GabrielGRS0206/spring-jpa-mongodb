@@ -9,6 +9,6 @@ public interface GroupService {
 	Group findById(String id);
 	List<Group> findAll();
 	Group save(Group group);
-	boolean deleteById(String id);
+	void deleteById(String id);
 	boolean existsById(String id);
 }
