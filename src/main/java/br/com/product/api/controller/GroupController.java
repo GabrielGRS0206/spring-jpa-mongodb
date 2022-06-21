@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.product.api.model.dto.GroupRequestDto;
-import br.com.product.api.model.dto.GroupResponseDto;
-import br.com.product.api.model.mapper.GroupMapper;
+import br.com.product.api.dto.GroupRequestDto;
+import br.com.product.api.dto.GroupResponseDto;
+import br.com.product.api.mapper.GroupMapper;
 import br.com.product.domain.service.GroupService;
 
 @RestController

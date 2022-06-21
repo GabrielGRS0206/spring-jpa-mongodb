@@ -7,9 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.product.api.model.dto.ProductRequestDto;
-import br.com.product.api.model.dto.ProductResponseDto;
-import br.com.product.api.model.mapper.ProductMapper;
+import br.com.product.api.dto.ProductRequestDto;
+import br.com.product.api.dto.ProductResponseDto;
 import br.com.product.domain.model.Product;
 
 class ProductMapperTest {

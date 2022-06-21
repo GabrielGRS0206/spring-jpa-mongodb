@@ -1,16 +1,14 @@
 package br.com.product.api.mapper;
 
-import static org.junit.Assert.assertNotNull;
+import br.com.product.api.dto.GroupRequestDto;
+import br.com.product.api.dto.GroupResponseDto;
+import br.com.product.domain.model.Group;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
-
-import br.com.product.api.model.dto.GroupRequestDto;
-import br.com.product.api.model.dto.GroupResponseDto;
-import br.com.product.api.model.mapper.GroupMapper;
-import br.com.product.domain.model.Group;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class GroupMapperTest {
 

@@ -1,4 +1,4 @@
-package br.com.product.api.model.dto;
+package br.com.product.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

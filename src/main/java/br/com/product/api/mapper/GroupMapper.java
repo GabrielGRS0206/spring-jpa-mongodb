@@ -1,4 +1,4 @@
-package br.com.product.api.model.mapper;
+package br.com.product.api.mapper;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
-import br.com.product.api.model.dto.GroupRequestDto;
-import br.com.product.api.model.dto.GroupResponseDto;
+import br.com.product.api.dto.GroupRequestDto;
+import br.com.product.api.dto.GroupResponseDto;
 import br.com.product.domain.model.Group;
 
 @Component
