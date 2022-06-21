@@ -1,8 +1,10 @@
 package br.com.product.domain.service.impl;
 
+import br.com.product.domain.exception.model.BusinessException;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.model.Product;
 import br.com.product.domain.repository.ProductRepository;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -67,20 +69,10 @@ class ProductServiceImplTest {
 
     @Test
     void testDeleteById() {
-        when(repository.existsById(Mockito.any())).thenReturn(Boolean.TRUE);
-        service.deleteById(Mockito.any());
-        verify(repository, times(1)).deleteById(Mockito.any());
-    }
-
-    @Test
-    void testExistsByIdReturnFalse() {
-        when(repository.existsById(Mockito.any())).thenReturn(Boolean.FALSE);
-
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            service.existsById(Mockito.any());
+        when(repository.existsById("1")).thenReturn(Boolean.FALSE);
+        BusinessException exception = assertThrows(BusinessException.class, () -> {
+            service.deleteById("1");
         }, "exception is null");
         assertNotNull(exception);
-        verify(repository, times(1)).existsById(Mockito.any());
     }
-
 }

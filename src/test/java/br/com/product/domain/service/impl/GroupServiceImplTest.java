@@ -1,5 +1,6 @@
 package br.com.product.domain.service.impl;
 
+import br.com.product.domain.exception.model.BusinessException;
 import br.com.product.domain.model.Group;
 import br.com.product.domain.repository.GroupRepository;
 import org.junit.jupiter.api.Test;
@@ -54,16 +55,18 @@ class GroupServiceImplTest {
 
     @Test
     void testDeleteById() {
-        when(repository.existsById(Mockito.any())).thenReturn(Boolean.TRUE);
-        service.deleteById(Mockito.any());
-        verify(repository, times(1)).deleteById(Mockito.any());
+        when(repository.existsById("1")).thenReturn(Boolean.FALSE);
+        BusinessException exception = assertThrows(BusinessException.class, () -> {
+            service.deleteById("1");
+        }, "exception is null");
+        assertNotNull(exception);
     }
 
     @Test
     void testExistsByIdReturnFalse() {
         when(repository.existsById(Mockito.any())).thenReturn(Boolean.FALSE);
 
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+        BusinessException exception = assertThrows(BusinessException.class, () -> {
             service.existsById(Mockito.any());
         }, "exception is null");
         assertNotNull(exception);
