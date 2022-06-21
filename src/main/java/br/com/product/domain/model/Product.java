@@ -20,4 +20,5 @@ public class Product {
 	
 	@DBRef
 	private Group group;
+
 }

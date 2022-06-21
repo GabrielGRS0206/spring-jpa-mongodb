@@ -1,7 +1,10 @@
 package br.com.product.api.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import br.com.product.api.mapper.ProductMapper;
+import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.product.api.dto.ProductRequestDto;
 import br.com.product.api.dto.ProductResponseDto;
-import br.com.product.api.mapper.ProductMapper;
 import br.com.product.domain.service.ProductService;
 
 @RestController
@@ -26,21 +28,21 @@ public class ProductController {
 	private ProductService service;
 	
 	@Autowired
-	private ProductMapper mapper;
+	private ProductMapper mapper = Mappers.getMapper(ProductMapper.class);
 	
 	@GetMapping("/{id}")
 	private ProductResponseDto findById(@PathVariable String id) {
-		return mapper.toDto(service.findById(id));
+		return mapper.map(service.findById(id));
 	}
 	
 	@GetMapping
 	private List<ProductResponseDto> findAll(){
-		return mapper.toListDto(service.findAll());
+		return service.findAll().stream().map(e -> mapper.map(e)).collect(Collectors.toList());
 	}
 	
 	@PostMapping
 	private ProductResponseDto save(@RequestBody ProductRequestDto product) {
-		return mapper.toDto(service.save(mapper.toEntity(product)));
+		return mapper.map(service.save(mapper.map(product)));
 	}
 	
 	@DeleteMapping("/{id}")
