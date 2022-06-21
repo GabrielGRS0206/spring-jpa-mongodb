@@ -10,11 +10,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
+    private static final String DESCRIPTION = "Api for registering products and their respectives groups.";
+
     @Bean
-    public OpenAPI springShopOpenAPI() {
+    public OpenAPI openAPI() {
         return new OpenAPI()
-                .info(new Info().title("SpringShop API")
-                        .description("Spring boot sample application")
+                .info(new Info().title("[ Registration ] Products and Groups")
+                        .description(DESCRIPTION)
                         .version("v0.0.1")
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()

@@ -8,6 +8,10 @@ Tecnologias utilizadas:
 - MongoDB
 - JUnit
 - Mockito
+- Lombok
+- MapStruct
+- Swagger
+- OpenAPI
 
 Projeto utilizando a interface MongoRepository do Spring Data MongoDB para trabalhar
 com a persistência e manipulação dos dados.
