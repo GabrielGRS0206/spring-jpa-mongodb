@@ -2,16 +2,25 @@ package br.com.product.domain.exception.handler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Schema
 @JsonInclude(Include.NON_NULL)
 public class Error {
 
+    @Schema(example = "404", description = "Invalid request")
     private Integer status;
+
+    @Schema(example = "2020-01-01 13:30:00", description = "Date hour error")
     private LocalDateTime dataHora;
+
+    @Schema(example = "invalid request", description = "Message example")
     private String message;
+
+    @Schema(example = "fields invalids", description = "Message error example")
     private String mensageError;
     private List<Field> fields;
 
