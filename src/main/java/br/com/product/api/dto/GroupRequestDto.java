@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class GroupRequestDto {
 
-	private String name;
-	private String observation;
+    private String name;
+    private String observation;
 }

@@ -1,782 +1,782 @@
 {
-	"info": {
-		"_postman_id": "538b0139-379a-44be-b024-ef2b9cc65908",
-		"name": "Spring MongoDb",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "Product",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Product",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/products",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"products"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:29:34 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"623353dee329187d1287f42d\",\n    \"name\": \"Maça\",\n    \"description\": \"fruta\",\n    \"value\": 12.5\n}"
-						}
-					]
-				},
-				{
-					"name": "Product and Group",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50,\r\n    \"groupId\": \"62335507e329187d1287f434\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Product and Group",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50,\r\n    \"groupId\": \"62335507e329187d1287f434\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/products",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"products"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:43:28 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"62335720e329187d1287f442\",\n    \"name\": \"Maça\",\n    \"description\": \"fruta\",\n    \"value\": 12.5,\n    \"group\": {\n        \"id\": \"62335507e329187d1287f434\",\n        \"name\": \"Alimentos\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Product FindAll",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Product FindAll",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/products",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"products"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:29:17 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"6231471f707b2022f9ca4c44\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314720707b2022f9ca4c45\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314721707b2022f9ca4c46\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314722707b2022f9ca4c47\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314722707b2022f9ca4c48\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314723707b2022f9ca4c49\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c3707b2022f9ca4c4d\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c4707b2022f9ca4c4e\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c4707b2022f9ca4c4f\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c5707b2022f9ca4c50\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62334809dc3ece76aed6b6ec\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623353c0e329187d1287f42c\",\n        \"name\": \"Maça\",\n        \"description\": \"fruta\",\n        \"value\": 12.5\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Delete byId Not Found",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/products/622ffa32d71ae770ff61db71",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"products",
-								"622ffa32d71ae770ff61db71"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Delete byId Not Found",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/products/622ffa32d71ae770ff61db71",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"products",
-										"622ffa32d71ae770ff61db71"
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:30:05 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 404,\n    \"dataHora\": \"2022-03-17T12:30:05.143017\",\n    \"message\": \"BusinessException: Product id not found\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Delete byId",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/products/623353c0e329187d1287f42c",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"products",
-								"623353c0e329187d1287f42c"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Delete byId Not Found Copy",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/products/623353c0e329187d1287f42c",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"products",
-										"623353c0e329187d1287f42c"
-									]
-								}
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "plain",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:30:32 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": null
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Group",
-			"item": [
-				{
-					"name": "Group",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Alimentos\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/groups",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"groups"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Groups",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\":\"Alimentos\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/groups",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"groups"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:34:45 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"62335515e329187d1287f435\",\n    \"name\": \"Alimentos\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Groups FindAll",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/groups",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"groups"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Groups FindAll",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/groups",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"groups"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:35:13 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"6233545ce329187d1287f42e\",\n        \"name\": \"Maça\"\n    },\n    {\n        \"id\": \"62335506e329187d1287f433\",\n        \"name\": \"Alimentos\"\n    },\n    {\n        \"id\": \"62335507e329187d1287f434\",\n        \"name\": \"Alimentos\"\n    },\n    {\n        \"id\": \"62335515e329187d1287f435\",\n        \"name\": \"Alimentos\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Delete byId Not Found",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/groups/62335507e329187d1287f43",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"groups",
-								"62335507e329187d1287f43"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Delete byId Not Found",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/groups/62335507e329187d1287f43",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"groups",
-										"62335507e329187d1287f43"
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:35:43 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 404,\n    \"dataHora\": \"2022-03-17T12:35:43.806532\",\n    \"message\": \"BusinessException: Group id not found\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Delete byId",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/groups/62335506e329187d1287f433",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"groups",
-								"62335506e329187d1287f433"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Delete byId",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/api/groups/62335506e329187d1287f433",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"groups",
-										"62335506e329187d1287f433"
-									]
-								}
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "plain",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Thu, 17 Mar 2022 15:36:14 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": null
-						}
-					]
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "538b0139-379a-44be-b024-ef2b9cc65908",
+    "name": "Spring MongoDb",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Product",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/products",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:29:34 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"623353dee329187d1287f42d\",\n    \"name\": \"Maça\",\n    \"description\": \"fruta\",\n    \"value\": 12.5\n}"
+            }
+          ]
+        },
+        {
+          "name": "Product and Group",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50,\r\n    \"groupId\": \"62335507e329187d1287f434\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Product and Group",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Maça\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50,\r\n    \"groupId\": \"62335507e329187d1287f434\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/products",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:43:28 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"62335720e329187d1287f442\",\n    \"name\": \"Maça\",\n    \"description\": \"fruta\",\n    \"value\": 12.5,\n    \"group\": {\n        \"id\": \"62335507e329187d1287f434\",\n        \"name\": \"Alimentos\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Product FindAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Product FindAll",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/products",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:29:17 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"6231471f707b2022f9ca4c44\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314720707b2022f9ca4c45\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314721707b2022f9ca4c46\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314722707b2022f9ca4c47\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314722707b2022f9ca4c48\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62314723707b2022f9ca4c49\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c3707b2022f9ca4c4d\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c4707b2022f9ca4c4e\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c4707b2022f9ca4c4f\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623147c5707b2022f9ca4c50\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"62334809dc3ece76aed6b6ec\",\n        \"name\": \"Banana maça\",\n        \"description\": \"frutas\",\n        \"value\": 12.5\n    },\n    {\n        \"id\": \"623353c0e329187d1287f42c\",\n        \"name\": \"Maça\",\n        \"description\": \"fruta\",\n        \"value\": 12.5\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Delete byId Not Found",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products/622ffa32d71ae770ff61db71",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "622ffa32d71ae770ff61db71"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete byId Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/products/622ffa32d71ae770ff61db71",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "products",
+                    "622ffa32d71ae770ff61db71"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:30:05 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 404,\n    \"dataHora\": \"2022-03-17T12:30:05.143017\",\n    \"message\": \"BusinessException: Product id not found\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete byId",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/products/623353c0e329187d1287f42c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "products",
+                "623353c0e329187d1287f42c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete byId Not Found Copy",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/products/623353c0e329187d1287f42c",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "products",
+                    "623353c0e329187d1287f42c"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:30:32 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Group",
+      "item": [
+        {
+          "name": "Group",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Alimentos\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/groups",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "groups"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Groups",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Alimentos\",\r\n    \"description\":\"fruta\",\r\n    \"value\":12.50\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/groups",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "groups"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:34:45 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"62335515e329187d1287f435\",\n    \"name\": \"Alimentos\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Groups FindAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/groups",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "groups"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Groups FindAll",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/groups",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "groups"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:35:13 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"6233545ce329187d1287f42e\",\n        \"name\": \"Maça\"\n    },\n    {\n        \"id\": \"62335506e329187d1287f433\",\n        \"name\": \"Alimentos\"\n    },\n    {\n        \"id\": \"62335507e329187d1287f434\",\n        \"name\": \"Alimentos\"\n    },\n    {\n        \"id\": \"62335515e329187d1287f435\",\n        \"name\": \"Alimentos\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Delete byId Not Found",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/groups/62335507e329187d1287f43",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "groups",
+                "62335507e329187d1287f43"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete byId Not Found",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/groups/62335507e329187d1287f43",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "groups",
+                    "62335507e329187d1287f43"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:35:43 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 404,\n    \"dataHora\": \"2022-03-17T12:35:43.806532\",\n    \"message\": \"BusinessException: Group id not found\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete byId",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/groups/62335506e329187d1287f433",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "groups",
+                "62335506e329187d1287f433"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete byId",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/groups/62335506e329187d1287f433",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "groups",
+                    "62335506e329187d1287f433"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 17 Mar 2022 15:36:14 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,9 +1,8 @@
 package br.com.product.domain.repository;
 
+import br.com.product.domain.model.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import br.com.product.domain.model.Product;
-
-public interface ProductRepository extends MongoRepository<Product, String>{
+public interface ProductRepository extends MongoRepository<Product, String> {
 
 }

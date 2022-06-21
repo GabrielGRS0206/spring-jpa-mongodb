@@ -13,19 +13,19 @@ class ProductMapperTest {
     ProductMapper mapper;
 
     @BeforeEach
-	public void setUp() throws Exception {
-		mapper = new ProductMapperImpl();
-	}
+    public void setUp() throws Exception {
+        mapper = new ProductMapperImpl();
+    }
 
-	@Test
-	void testToDto() {
-		ProductResponseDto response = mapper.map(new Product());
-		assertNotNull(response);
-	}
+    @Test
+    void testToDto() {
+        ProductResponseDto response = mapper.map(new Product());
+        assertNotNull(response);
+    }
 
-	@Test
-	void testToEntity() {
-		Product request = mapper.map(new ProductRequestDto());
-		assertNotNull(request);
-	}
+    @Test
+    void testToEntity() {
+        Product request = mapper.map(new ProductRequestDto());
+        assertNotNull(request);
+    }
 }

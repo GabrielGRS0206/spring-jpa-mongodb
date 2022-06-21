@@ -17,15 +17,15 @@ class GroupMapperTest {
         mapper = new GroupMapperImpl();
     }
 
-	@Test
-	void testToDto() {
-		GroupResponseDto response = mapper.map(new Group());
-		assertNotNull(response);
-	}
+    @Test
+    void testToDto() {
+        GroupResponseDto response = mapper.map(new Group());
+        assertNotNull(response);
+    }
 
-	@Test
-	void testToEntity() {
-		Group request = mapper.map(new GroupRequestDto());
-		assertNotNull(request);
-	}
+    @Test
+    void testToEntity() {
+        Group request = mapper.map(new GroupRequestDto());
+        assertNotNull(request);
+    }
 }

@@ -1,9 +1,8 @@
 package br.com.product.domain.repository;
 
+import br.com.product.domain.model.Group;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import br.com.product.domain.model.Group;
-
-public interface GroupRepository extends MongoRepository<Group, String>{
+public interface GroupRepository extends MongoRepository<Group, String> {
 
 }
